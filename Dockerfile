@@ -1,11 +1,8 @@
-FROM node:12
+FROM node:latest
 
-WORKDIR /var/app
+RUN npm install -g nodemon
+COPY . /src
+RUN cd /src; npm install
+WORKDIR /src
 
-#COPY package.json .
-#RUN npm install
-COPY . .
-
-#EXPOSE 8080
-#CMD [ "npm", "start" ]
-CMD [ "node", "server.js" ]
+CMD ["nodemon", "app.js"]

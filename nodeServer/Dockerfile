@@ -5,4 +5,4 @@ COPY . /src
 RUN cd /src; npm install
 WORKDIR /src
 
-CMD ["nodemon", "app.js"]
+CMD ["nodemon", "server.js"]

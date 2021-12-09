@@ -12,17 +12,17 @@ services:
         container_name: nodeserver
         build: ./nodeServer
         # restart: always
-        env_file:
-            # - ./nodeServer/.env
-            # - ./nodeServer/restServer/.env
+        # env_file:
+        # - ./nodeServer/.env
+        # - ./nodeServer/restServer/.env
         expose:
             - "8081"
     nodeserver2:
         container_name: nodeserver2
         build: ./nodeServer2
         # restart: always
-        env_file:
-            # - ./nodeServerenv/.env
-            # - ./nodeServerenv/restServer/.env
+        # env_file:
+        # - ./nodeServerenv/.env
+        # - ./nodeServerenv/restServer/.env
         expose:
             - "8082"
